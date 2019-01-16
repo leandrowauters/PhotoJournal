@@ -13,6 +13,7 @@ class AddItemViewController: UIViewController {
     var function: Function!
     var imageSelected = UIImage()
     var indexSelected = Int()
+    var imageWasSelected = Bool()
     private var imagePickerViewController: UIImagePickerController!
     
     @IBOutlet weak var imageDescriptionTextView: UITextView!
@@ -26,6 +27,7 @@ class AddItemViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        showSaveButton()
         saveButton.isEnabled = false
         imageDescriptionTextView.delegate = self
         imageDescriptionTextView.text = "Enter Title"
@@ -49,7 +51,13 @@ class AddItemViewController: UIViewController {
     private func showImagePickerController() {
         present(imagePickerViewController,animated: true,completion:  nil)
     }
-    
+    private func showSaveButton(){
+        if imageDescriptionTextView.text != nil{
+            if imageWasSelected{
+                saveButton.isEnabled = true
+            }
+        }
+    }
     @IBAction func savedWasPressed(_ sender: UIBarButtonItem) {
         guard let photoDescription = imageDescriptionTextView.text else {fatalError("title nil")}
         if let imageData = imageSelected.jpegData(compressionQuality: 0.5) {
@@ -88,6 +96,8 @@ extension AddItemViewController: UIImagePickerControllerDelegate, UINavigationCo
         if let image = info[UIImagePickerController.InfoKey.originalImage] as? UIImage {
             imageToAdd.image = image
             imageSelected = image
+            imageWasSelected = true
+            showSaveButton()
 //            savePhotoJournal(image: image)
         } else {
             print("Originial image is nil")
@@ -95,7 +105,9 @@ extension AddItemViewController: UIImagePickerControllerDelegate, UINavigationCo
         dismiss(animated: true, completion: nil)
     }
     func textViewDidBeginEditing(_ textView: UITextView) {
-        saveButton.isEnabled = true
+//        saveButton.isEnabled = true
         textView.text = ""
+        textView.textColor = .black
+        showSaveButton()
     }
 }

@@ -87,7 +87,18 @@ extension PhotoJournalViewController: UICollectionViewDataSource, UICollectionVi
         cell.cellButton.addTarget(self, action: #selector(popAlert(sender:)), for: .touchUpInside)
         let image = UIImage(data: photoToSet.imageData)
         cell.image.image = image
-//        cell.layer.cornerRadius = 15
+        cell.layer.cornerRadius = 15
+        cell.layer.borderWidth = 5
+        cell.layer.borderColor = #colorLiteral(red: 0.9764705896, green: 0.850980401, blue: 0.5490196347, alpha: 1).cgColor
+//        cell.layer.masksToBounds = true
+        cell.layer.backgroundColor = UIColor.white.cgColor
+        cell.layer.shadowColor = UIColor.gray.cgColor
+        cell.layer.shadowOffset = CGSize(width: 2.0, height: 2.0)//CGSizeMake(0, 2.0);
+        cell.layer.shadowRadius = 2.0
+        cell.layer.shadowOpacity = 1.0
+        cell.layer.masksToBounds = false
+        cell.layer.shadowPath = UIBezierPath(roundedRect:cell.bounds, cornerRadius:cell.contentView.layer.cornerRadius).cgPath
+        
         return cell
     }
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
