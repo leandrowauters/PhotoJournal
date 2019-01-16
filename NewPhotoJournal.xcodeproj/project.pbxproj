@@ -12,6 +12,12 @@
 		D5CDA70F21ED1E9500A59133 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D5CDA70D21ED1E9500A59133 /* Main.storyboard */; };
 		D5CDA71121ED1E9600A59133 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D5CDA71021ED1E9600A59133 /* Assets.xcassets */; };
 		D5CDA71421ED1E9600A59133 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D5CDA71221ED1E9600A59133 /* LaunchScreen.storyboard */; };
+		D5CDA72621ED435700A59133 /* AddItemViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5CDA72521ED435700A59133 /* AddItemViewController.swift */; };
+		D5CDA72821ED438700A59133 /* ImageCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5CDA72721ED438700A59133 /* ImageCollectionViewCell.swift */; };
+		D5DAFE9C21ED837900F5F996 /* PhotosModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5DAFE9B21ED837900F5F996 /* PhotosModel.swift */; };
+		D5DAFE9E21ED8C5F00F5F996 /* ScreenHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5DAFE9D21ED8C5F00F5F996 /* ScreenHelper.swift */; };
+		D5F2B10121ED4A8000FC0674 /* DataPersistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5F2B10021ED4A8000FC0674 /* DataPersistence.swift */; };
+		D5F2B10421ED4ABC00FC0674 /* Photo.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5F2B10321ED4ABC00FC0674 /* Photo.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +28,12 @@
 		D5CDA71021ED1E9600A59133 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D5CDA71321ED1E9600A59133 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D5CDA71521ED1E9600A59133 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D5CDA72521ED435700A59133 /* AddItemViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddItemViewController.swift; sourceTree = "<group>"; };
+		D5CDA72721ED438700A59133 /* ImageCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageCollectionViewCell.swift; sourceTree = "<group>"; };
+		D5DAFE9B21ED837900F5F996 /* PhotosModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotosModel.swift; sourceTree = "<group>"; };
+		D5DAFE9D21ED8C5F00F5F996 /* ScreenHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScreenHelper.swift; sourceTree = "<group>"; };
+		D5F2B10021ED4A8000FC0674 /* DataPersistence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataPersistence.swift; sourceTree = "<group>"; };
+		D5F2B10321ED4ABC00FC0674 /* Photo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Photo.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,8 +67,14 @@
 			isa = PBXGroup;
 			children = (
 				D5CDA70921ED1E9500A59133 /* AppDelegate.swift */,
+				D5DAFE9B21ED837900F5F996 /* PhotosModel.swift */,
 				D5CDA70B21ED1E9500A59133 /* PhotoJournalViewController.swift */,
+				D5F2B10321ED4ABC00FC0674 /* Photo.swift */,
+				D5CDA72521ED435700A59133 /* AddItemViewController.swift */,
+				D5DAFE9D21ED8C5F00F5F996 /* ScreenHelper.swift */,
+				D5F2B10021ED4A8000FC0674 /* DataPersistence.swift */,
 				D5CDA70D21ED1E9500A59133 /* Main.storyboard */,
+				D5CDA72721ED438700A59133 /* ImageCollectionViewCell.swift */,
 				D5CDA71021ED1E9600A59133 /* Assets.xcassets */,
 				D5CDA71221ED1E9600A59133 /* LaunchScreen.storyboard */,
 				D5CDA71521ED1E9600A59133 /* Info.plist */,
@@ -135,8 +153,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D5DAFE9C21ED837900F5F996 /* PhotosModel.swift in Sources */,
+				D5F2B10421ED4ABC00FC0674 /* Photo.swift in Sources */,
 				D5CDA70C21ED1E9500A59133 /* PhotoJournalViewController.swift in Sources */,
 				D5CDA70A21ED1E9500A59133 /* AppDelegate.swift in Sources */,
+				D5CDA72821ED438700A59133 /* ImageCollectionViewCell.swift in Sources */,
+				D5DAFE9E21ED8C5F00F5F996 /* ScreenHelper.swift in Sources */,
+				D5F2B10121ED4A8000FC0674 /* DataPersistence.swift in Sources */,
+				D5CDA72621ED435700A59133 /* AddItemViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
