@@ -53,7 +53,7 @@ class AddItemViewController: UIViewController {
     }
     private func showSaveButton(){
         if imageDescriptionTextView.text != nil{
-            if imageWasSelected{
+            if imageWasSelected || function == .edit{
                 saveButton.isEnabled = true
             }
         }
@@ -85,6 +85,9 @@ class AddItemViewController: UIViewController {
         showImagePickerController()
     }
     
+    @IBAction func cancelWasPressed(_ sender: Any) {
+        dismiss(animated: true, completion: nil)
+    }
     
 
 }

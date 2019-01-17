@@ -37,7 +37,8 @@ class PhotoJournalViewController: UIViewController {
         photoCollectionView.reloadData()
         photos = PhotoModel.getPhotos()
     }
-    @objc func popAlert (sender: UIButton){
+    
+    @IBAction func popAlert (sender: UIButton){
         let actionSheet = UIAlertController(title: nil, message: nil, preferredStyle: .actionSheet)
         let index = sender.tag
         let delete = UIAlertAction(title: "Delete", style: .destructive) { (UIAlertAction) in
@@ -84,7 +85,7 @@ extension PhotoJournalViewController: UICollectionViewDataSource, UICollectionVi
         cell.descriptionLabel.text = photoToSet.description
         cell.dateLabel.text = photoToSet.dateFormattedString
         cell.cellButton.tag = indexPath.row
-        cell.cellButton.addTarget(self, action: #selector(popAlert(sender:)), for: .touchUpInside)
+//        cell.cellButton.addTarget(self, action: #selector(popAlert(sender:)), for: .touchUpInside)
         let image = UIImage(data: photoToSet.imageData)
         cell.image.image = image
         cell.layer.cornerRadius = 15
@@ -98,7 +99,7 @@ extension PhotoJournalViewController: UICollectionViewDataSource, UICollectionVi
         cell.layer.shadowOpacity = 1.0
         cell.layer.masksToBounds = false
         cell.layer.shadowPath = UIBezierPath(roundedRect:cell.bounds, cornerRadius:cell.contentView.layer.cornerRadius).cgPath
-        
+
         return cell
     }
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
