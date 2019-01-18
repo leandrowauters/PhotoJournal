@@ -51,6 +51,7 @@ final class PhotoModel {
             if let data = FileManager.default.contents(atPath: path){
                 do {
                     photos = try PropertyListDecoder().decode([Photo].self, from: data)
+                    photos = photos.sorted{$0.date > $1.date}
                 }catch{
                     print("Property list decoding error: \(error)")
                 }
